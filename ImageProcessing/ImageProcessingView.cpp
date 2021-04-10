@@ -1936,10 +1936,10 @@ void CImageProcessingView::OnRotate(int rotation)
 
 	float varFloat1;        //浮点参数变量1
 	float varFloat2;        //浮点参数变量2
-	varFloat1 = (float)(-0.5 * (lDstWidth - 1) * fCosa - 0.5 * (lDstHeight - 1) * fSina// 将经常用到的两个常数事先求出，以便作为常数使用
-		+ 0.5 * (lWidth - 1));//dx
-	varFloat2 = (float)(0.5 * (lDstWidth - 1) * fSina - 0.5 * (lDstHeight - 1) * fCosa
-		+ 0.5 * (lHeight - 1));//dy
+	varFloat1 = (float)(-0.5 * (lDstWidth) * fCosa - 0.5 * (lDstHeight ) * fSina// 将经常用到的两个常数事先求出，以便作为常数使用
+		+ 0.5 * (lWidth ));//dx
+	varFloat2 = (float)(0.5 * (lDstWidth) * fSina - 0.5 * (lDstHeight) * fCosa
+		+ 0.5 * (lHeight ));//dy
 
 	//逐个扫面图像中的像素点,进行灰度线性变换
 	for (i = 0; i < lDstHeight; i++)
